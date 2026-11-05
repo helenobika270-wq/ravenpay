@@ -1,3 +1,33 @@
+RavenPay — Earn Globally. Save for What Matters.
+
+RavenPay is a stablecoin-powered financial platform designed for Nigerians who earn internationally.
+
+It brings global payments, everyday money management, and goal-based savings into one connected experience, helping freelancers, remote workers, and crypto earners manage their money and plan for the future.
+
+What We’ve Built
+
+An interactive MVP prototype featuring:
+
+* Wallet dashboard and balances
+* Simulated deposits and withdrawals
+* Transfers and transaction history
+* Goal-based savings experiences
+* Persistent backend ledger for demo transactions
+
+Live Demo: https://ravenpay-rho.vercel.app/
+
+Current Status
+
+RavenPay is a deployed interactive prototype. Financial transactions currently use simulated balances and flows rather than real money.
+
+Planned Integrations
+
+* Roqqu: Supported cryptocurrency payment infrastructure
+* Nuvion: Fiat payment and withdrawal infrastructure, subject to verification
+* DeFindex / Blend: Potential stablecoin savings and yield infrastructure, subject to technical, security, and regulatory evaluation
+
+These integrations are planned or under evaluation and are not yet operational.
+
 # RavenPay prototype
 
 For screen recording, open `/showcase` on the local Vite server. The titanium phone frame embeds the same running app at 390 × 844, scales uniformly to fit the browser, and keeps all interactions inside the screen. The original `/` view is unchanged.
