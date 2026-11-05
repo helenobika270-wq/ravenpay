@@ -1,0 +1,17 @@
+# Private local state must never be uploaded by the Vercel CLI.
+.env
+.env.*
+!.env.example
+.data/
+.secrets/
+.aws/
+.vercel/
+.git/
+node_modules/
+artifacts/
+.tmp/
+*.log
+*.sqlite*
+*.db*
+*.pem
+*.key

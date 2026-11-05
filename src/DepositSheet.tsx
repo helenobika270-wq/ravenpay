@@ -26,7 +26,7 @@ function AccountBadge({ account }: { account: DepositAccount }) {
   return <span className="deposit-account-badge"><span className={account.code === 'USD' ? 'usd-flag' : 'currency-flag'}><img src={account.flag} width={18} height={18} alt=""/></span>{account.code} Account</span>;
 }
 
-export function DepositSheet({ account, onClose, onComplete, onConfirmed }: { account: DepositAccount; onClose: () => void; onComplete: (amount: number, split?: boolean) => void; onConfirmed: (amount: number) => void }) {
+export function DepositSheet({ account, onClose, onComplete, onConfirmed }: { account: DepositAccount; onClose: () => void; onComplete: (amount: number, split?: boolean) => void; onConfirmed: (amount: number) => void | Promise<void> }) {
   const [step, setStep] = useState<'amount' | 'review' | 'processing' | 'success'>('amount');
   const [creditError, setCreditError] = useState('');
   const confirmed = useRef(false);
@@ -72,7 +72,7 @@ export function DepositSheet({ account, onClose, onComplete, onConfirmed }: { ac
   useEffect(() => { title.current?.focus({ preventScroll: true }); }, [step]);
   useEffect(() => {
     if (step !== 'processing') return;
-    const timer = window.setTimeout(() => { try { if (!confirmed.current) { confirmRef.current(amount); confirmed.current = true; } setStep('success'); } catch { setCreditError('Could not save this deposit. Check your balance before trying again.'); setStep('review'); } }, 1150);
+    const timer = window.setTimeout(async () => { try { if (!confirmed.current) { await confirmRef.current(amount); confirmed.current = true; } setStep('success'); } catch { setCreditError('Could not save this deposit. Check your balance before trying again.'); setStep('review'); } }, 1150);
     return () => window.clearTimeout(timer);
   }, [step]);
   useEffect(() => {

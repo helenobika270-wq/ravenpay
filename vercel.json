@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/*.mjs": {
+      "maxDuration": 30,
+      "includeFiles": "{server/**,shared/**,src/accounts.ts}"
+    }
+  },
+  "rewrites": [
+    {"source": "/showcase", "destination": "/index.html"},
+    {"source": "/showcase/", "destination": "/index.html"}
+  ],
+  "headers": [
+    {"source": "/api/:path*", "headers": [{"key": "Cache-Control", "value": "no-store"}, {"key": "X-Content-Type-Options", "value": "nosniff"}]}
+  ]
+}

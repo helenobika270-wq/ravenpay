@@ -4,6 +4,10 @@ For screen recording, open `/showcase` on the local Vite server. The titanium ph
 
 Mobile-first React + TypeScript home screen recreated from Figma node `39:4851`, using Tailwind CSS and Motion for React.
 
+## Persistent backend
+
+The server ledger now stores demo balances, savings, deposits and withdrawals in SQLite locally and requires Turso/libSQL on Vercel. Existing browser state imports once, without resetting balances. Browser storage is now a cache. See [backend setup and security boundaries](docs/backend-ledger.md). The older interaction notes below describe UI behavior; their browser-only persistence descriptions are superseded by the server ledger.
+
 ## Run locally
 
 ```sh
@@ -44,3 +48,7 @@ Spending-wallet withdrawals and token sends are simulated in the existing demo l
 Domestic USD/GBP/EUR and all five NGN payout routes use illustrative rates/fees in `outgoingModel.ts`; token rates are configured separately. Crypto uses a separate `Simulated network` setting and token fee; no broadcast, transaction hash, or explorer exists. Bank validation covers domestic field formats and EUR IBAN checksum/length. It does not establish ownership/existence. Use demo beneficiary/recipient fixtures to avoid entering personal data. Provider integration must supply supported routes/networks, verified beneficiary/address rules, authoritative quotes and delivery terms, server-side reservations/idempotency and reconciled payment status. No provider or signing integration is included.
 
 Verification: `node scripts/check-outgoing.mjs`, `node scripts/check-savings.mjs`, `node scripts/check-accounts.mjs`, TypeScript build and Vite production build. Browser checks cover USD completion, NGN selector/search and cancellation, USDC send Max/fees, forced pending/refresh/reopen/completion/reversal, and 320px receipt overflow.
+
+## Roqqu Test preparation
+
+Server-only Roqqu Test configuration, the Receive connection-status check, an offline safety suite, and an approval-gated wallet-generation client are prepared. Roqqu has confirmed the Test base URL, staging header and Test Private Key mapping. The operator-only read-only balance probe requires private local credential configuration; wallet/network routes remain separately gated. Follow [the secure setup guide](docs/roqqu-test-setup.md); do not paste credentials into chat or run wallet creation before approval. No Roqqu-backed balances are currently credited.

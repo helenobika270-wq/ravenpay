@@ -29,3 +29,15 @@ artifacts/
 # Machine-specific files
 .DS_Store
 Thumbs.db
+
+# Vercel local project metadata and downloaded environment files
+.vercel/
+
+# Local persistent ledger and backups
+.data/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.db
+*.db-wal
+*.db-shm
