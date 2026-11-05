@@ -1,0 +1,5 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="lucide/wallet-cards">
+<path id="Vector" d="M3 11H6.75C7.06049 11 7.36672 11.0723 7.64443 11.2111C7.92214 11.35 8.16371 11.5516 8.35 11.8L8.8 12.4C9.17259 12.8968 9.65572 13.3 10.2111 13.5777C10.7666 13.8554 11.379 14 12 14C12.621 14 13.2334 13.8554 13.7889 13.5777C14.3443 13.3 14.8274 12.8968 15.2 12.4L15.65 11.8C15.8363 11.5516 16.0779 11.35 16.3556 11.2111C16.6333 11.0723 16.9395 11 17.25 11H21M3 7H21M5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="#121212"/>
+</g>
+</svg>

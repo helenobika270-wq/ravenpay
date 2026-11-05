@@ -1,0 +1,14 @@
+import { productName } from './productCopy';
+import { OutgoingReceipt } from './SpendingWithdrawal';
+import { useState } from 'react';
+import { AnimatePresence } from 'motion/react';
+import { AccountIcon } from './AccountStack';
+import { Sheet } from './AccountSheet';
+import { accountBalance, accountById } from './accounts';
+import { money, value, useLedger, type Ledger } from './savingsStore';
+export function RecentActivity({items,expanded=false}:{expanded?:boolean;items:Ledger['activity']}) {
+ const ledger=useLedger();
+ const [selected,setSelected]=useState<Ledger['activity'][number]|null>(null);
+ const title=(item:Ledger['activity'][number])=>item.kind==='outgoing'?productName(item.title):item.kind==='internal'?(item.title.toLowerCase().includes('locked')?'Moved to locked savings':'Moved to flexible savings'):item.kind==='withdrawal'?'Moved from flexible savings':item.kind==='earnings'?'Interest received':'Deposit received';
+ return <><div className="transactions">{items.slice(0,expanded?undefined:6).map(item=><button className="transaction" key={item.id} onClick={()=>setSelected(item)}><AccountIcon code={item.asset}/><span className="transaction-copy"><span className="transaction-title">{title(item)}</span><span className="muted">{item.kind==='outgoing'?(ledger.outgoing.find(t=>t.id===item.id)?.status??'pending'):item.kind==='internal'||item.kind==='withdrawal'?'Internal transfer':item.kind==='earnings'?'Completed':'Completed'}</span></span><span className="amount">{item.kind==='internal'||item.kind==='outgoing'?'−':'+'}{accountBalance(accountById(item.asset),value(item.amount,item.asset))}</span></button>)}{[{asset:'USDT' as const,title:'Sent USDT to James',amount:'−250.00 USDT'},{asset:'USDC' as const,title:'Received USDC from Sarah',amount:'+450.00 USDC'}].map(item=><div className="transaction" key={item.asset}><AccountIcon code={item.asset}/><span className="transaction-copy"><span className="transaction-title">{item.title}</span><span className="muted">Completed</span></span><span className="amount">{item.amount}</span></div>)}</div><AnimatePresence>{selected?.kind==='outgoing'?<OutgoingReceipt id={selected.id} onClose={()=>setSelected(null)} onHome={()=>{setSelected(null);window.scrollTo({top:0});}}/>:selected&&<Sheet title="Transaction details" onClose={()=>setSelected(null)}><p className="sheet-subtitle">{title(selected)}</p><dl className="savings-rows"><div><dt>Exact amount</dt><dd>{money(selected.amount,selected.asset)}</dd></div><div><dt>Type</dt><dd>{selected.kind==='internal'||selected.kind==='withdrawal'?'Internal transfer':selected.kind}</dd></div><div><dt>Record</dt><dd>{title(selected)}</dd></div><div><dt>Reference</dt><dd>{selected.id}</dd></div></dl><button className="deposit-primary" onClick={()=>setSelected(null)}>Done</button></Sheet>}</AnimatePresence></>;
+}

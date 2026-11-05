@@ -1,0 +1,38 @@
+.all-accounts { cursor: pointer; }
+.account-stack > .all-accounts { height: 25px; }
+.account-stack > .all-accounts::before { content: ''; position: absolute; top: -12px; bottom: 0; left: 0; right: 0; }
+.account-dropdown { border: 0; padding: 0; background: none; cursor: pointer; }
+.account-dropdown::after { content: ''; position: absolute; inset: 0 0 auto; height: 44px; }
+.account-dropdown:focus-visible { outline-offset: 2px; }
+.selected-balance { max-width: 100%; white-space: nowrap; }
+.preview-account-name { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+.account-icon { --account-icon-size: 18px; width: var(--account-icon-size); height: var(--account-icon-size); position: relative; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; border-radius: 50%; }
+.account-icon > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.account-icon-usd > img { position: absolute; max-width: none; width: 226.6667%; height: 226.6667%; left: -47.7778%; top: -47.2222%; }
+.preview-account-name .account-icon { --account-icon-size: 14px; }
+.preview-account-balance { font-size: clamp(9px, 2.9vw, 12px); text-align: right; overflow-wrap: anywhere; min-width: 0; }
+.account-selector:not(.selected) { gap: 8px; }
+.token-account .account-selector.selected { gap: 3px; }
+.token-balance { line-height: 29px; }
+.token-equivalent { color: #bcbcc0; font-size: 10px; line-height: 13px; max-width: 100%; overflow-wrap: anywhere; }
+.token-equivalent > span { color: #979799; font-size: 9px; }
+.account-sheet .sheet-close { font-size: 24px; }
+.account-options { display: flex; flex-direction: column; gap: 8px; }
+.account-option { display: flex; width: 100%; align-items: center; gap: 12px; padding: 13px 12px; min-height: 66px; border-radius: 14px; border: 1px solid #ededed; background: #f6f6f6; text-align: left; cursor: pointer; }
+.account-option[aria-pressed=true] { background: #fceffc; border-color: #f2b4f3; }
+.account-option:hover { border-color: #f2b4f3; }
+.account-option-copy { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.account-option-copy strong { font-weight: 500; font-size: 14px; }
+.account-option-copy > span { color: #737373; font-size: 12px; overflow-wrap: anywhere; }
+.account-selection-mark { width: 20px; height: 20px; border-radius: 50%; border: 1px solid #ddd; text-align: center; line-height: 19px; font-size: 12px; flex-shrink: 0; }
+.account-option[aria-pressed=true] .account-selection-mark { border-color: #fb72fe; background: #fb72fe; color: #171717; }
+.wallet-demo-notice { display: flex; align-items: flex-start; gap: 10px; border: 1px solid #f2d5f2; padding: 16px; background: #fff0ff; border-radius: 16px; margin: 0 0 22px; }
+.wallet-demo-notice strong { font-size: 13px; font-weight: 500; }
+.wallet-demo-notice p { font-size: 12px; line-height: 18px; color: #737373; margin: 7px 0 0; }
+.wallet-connection-details { margin: 0; font-size: 12px; }
+.wallet-connection-details > div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid #ededed; }
+.wallet-connection-details dt { color: #737373; }
+.wallet-connection-details dd { margin: 0; text-align: right; }
+.wallet-explanation { font-size: 11px; line-height: 17px; color: #737373; margin: 16px 0; }
+.wallet-disabled-actions { display: flex; gap: 10px; margin-bottom: 22px; }
+.wallet-disabled-actions button { flex: 1; min-height: 44px; border: 1px solid #ededed; border-radius: 22px; background: #f0f0f0; color: #979799; font-size: 12px; cursor: not-allowed; }

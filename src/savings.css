@@ -1,0 +1,43 @@
+.savings-screen { margin: 20px 24px 0; padding-bottom: 24px; }
+.savings-top { display:flex; align-items:center; gap:14px; margin-bottom:24px; }
+.savings-top button { border:0; background:#f0f0f0; border-radius:50%; width:44px; height:44px; cursor:pointer; }
+.savings-screen h1 { font-size:27px; line-height:1.2; letter-spacing:-.8px; font-weight:500; outline:none; margin:0 0 16px; }
+.savings-screen h2 { font-size:18px; font-weight:500; }
+.savings-intro { font-size:13px; color:#737373; line-height:1.6; margin:0 0 24px; }
+.savings-note { font-size:11px; color:#737373; line-height:1.65; margin:16px 0; }
+.savings-card { border:1px solid #eaeaea; border-radius:20px; padding:18px; margin-bottom:16px; background:#f6f6f6; }
+.savings-account { display:flex; align-items:center; gap:6px; font-size:13px; }
+.savings-rows { margin:16px 0 24px; font-size:12px; }
+.savings-rows > div { display:flex; justify-content:space-between; gap:18px; padding:13px 0; border-bottom:1px solid #ededed; }
+.savings-rows dt { color:#737373; flex:1; }
+.savings-rows dd { text-align:right; max-width:58%; margin:0; font-weight:500; overflow-wrap:anywhere; font-variant-numeric:tabular-nums; }
+.savings-plan-link { width:100%; display:flex; justify-content:space-between; gap:12px; text-align:left; background:none; border:0; border-top:1px solid #e5e5e5; padding:15px 0; font-size:12px; cursor:pointer; }
+.savings-plan-link small { display:block; color:#737373; margin-top:5px; font-size:10px; }
+.savings-empty { text-align:center; padding:32px 12px; margin:16px 0 28px; background:#f6f6f6; border-radius:24px; }
+.savings-empty > span { display:block; font-size:42px; color:#d355d5; margin-bottom:14px; }
+.savings-empty p, .savings-empty small { font-size:12px; line-height:1.6; color:#737373; }
+.savings-field { display:flex; flex-direction:column; gap:8px; font-size:11px; color:#737373; margin-bottom:20px; min-width:0; }
+.savings-field input,.savings-field select { width:100%; min-width:0; min-height:48px; border:1px solid #ddd; border-radius:12px; background:#fcfcfc; padding:10px; font:inherit; font-size:14px; color:#171717; }
+.allocation-card { background:linear-gradient(145deg,#fff0ff,#f6f6f6); }
+.allocation-value { font-size:clamp(19px,6vw,28px); font-weight:700; margin-top:22px; overflow-wrap:anywhere; font-variant-numeric:tabular-nums; }
+.allocation-card p { color:#737373; font-size:11px; }
+.allocation-card input[type=range] { width:100%; accent-color:#d355d5; min-height:44px; margin:12px 0; }
+.savings-chips { display:flex; gap:6px; margin:12px 0; }
+.savings-chips button { flex:1; min-width:0; min-height:44px; padding:5px; background:#fcfcfc; border:1px solid #e5e5e5; border-radius:12px; font-size:12px; cursor:pointer; }
+.savings-chips button[aria-pressed=true],.savings-choice[aria-pressed=true] { background:#fce4fc; border-color:#f3a3f4; }
+.allocation-inputs { display:grid; grid-template-columns:1fr 1.5fr; gap:12px; }
+.savings-choice { width:100%; text-align:left; cursor:pointer; }
+.savings-choice strong { display:flex; justify-content:space-between; font-size:15px; font-weight:500; }
+.savings-choice p { font-size:12px; margin:12px 0; }
+.savings-choice small { font-size:11px; line-height:1.6; color:#737373; }
+.durations small { display:block; font-size:9px; margin:8px 0 2px; }
+.savings-payout { border:0; margin:24px 0; padding:0; font-size:12px; }
+.savings-payout legend { margin-bottom:10px; }
+.savings-payout label { display:inline-flex; align-items:center; gap:6px; min-height:44px; margin-right:18px; }
+.savings-ack { display:flex; gap:10px; font-size:12px; line-height:1.6; padding:14px; border-radius:14px; background:#f6f6f6; }
+.savings-ack input { flex-shrink:0; width:18px; height:18px; margin-top:3px; accent-color:#d355d5; }
+.savings-error { padding:14px; border-radius:12px; background:#fff0f5; color:#9a345b; font-size:12px; line-height:1.6; }
+.savings-success { margin:24px auto; background:#fce4fc; color:#a338a6; border-radius:50%; width:80px; height:80px; display:grid; place-items:center; font-size:36px; }
+.savings-demo-controls { padding:14px; border:1px dashed #ddd; border-radius:12px; font-size:11px; margin:20px 0; }
+.savings-demo-controls summary { cursor:pointer; min-height:32px; }
+.savings-demo-controls button { min-height:44px; border:1px solid #ddd; border-radius:10px; padding:8px; background:#f6f6f6; }

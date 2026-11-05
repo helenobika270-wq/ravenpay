@@ -1,0 +1,31 @@
+# Dependencies and build output
+node_modules/
+dist/
+*.log
+*.tsbuildinfo
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+!.env.template
+.npmrc
+.pnpmrc
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+credentials.json
+service-account*.json
+.secrets/
+.aws/
+
+# Local verification captures and temporary tooling
+artifacts/
+.tmp/
+.tmp-*/
+
+# Machine-specific files
+.DS_Store
+Thumbs.db

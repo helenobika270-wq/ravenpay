@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="16" height="8.5" viewBox="0 0 16 8.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="battery-levels" clip-path="url(#clip0_0_42)">
+<path id="level-start" d="M0 1.25C0 0.559644 0.559644 0 1.25 0H2V8.5H1.25C0.559644 8.5 0 7.94036 0 7.25V1.25Z" fill="black"/>
+<path id="level-2" d="M2 0H4V8.5H2V0Z" fill="black"/>
+<path id="level-3" d="M4 0H6V8.5H4V0Z" fill="black"/>
+<path id="level-4" d="M6 0H8V8.5H6V0Z" fill="black"/>
+<path id="level-5" d="M8 0H10V8.5H8V0Z" fill="black"/>
+<path id="level-6" d="M10 0H12V8.5H10V0Z" fill="black"/>
+<path id="level-7" d="M12 0H14V8.5H12V0Z" fill="black"/>
+<path id="level-last" d="M16 1.25C16 0.559644 15.4404 0 14.75 0H14V8.5H14.75C15.4404 8.5 16 7.94036 16 7.25V1.25Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_0_42">
+<rect width="16" height="8.5" fill="white"/>
+</clipPath>
+</defs>
+</svg>

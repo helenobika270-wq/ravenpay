@@ -1,0 +1,22 @@
+html.showcase-root, .showcase-root body, .showcase-root #root { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #fff; }
+.showcase-stage { width: 100%; height: 100dvh; display: grid; place-items: center; overflow: hidden; background: #fff; }
+.showcase-device-slot { position: relative; flex-shrink: 0; }
+.showcase-device { position: absolute; top: 0; left: 0; width: 414px; height: 868px; padding: 12px; border-radius: 61px; transform-origin: top left; background: linear-gradient(105deg,#8e8d88 0%,#e6e4dd 2%,#a7a59f 4%,#d4d2cc 48%,#f6f5f1 94%,#999790 98%,#ccc9c1 100%); box-shadow: inset 0 0 0 1px #8e8d88, inset 0 0 0 3px #dedcd6, inset 0 0 0 4px #8f8e88, inset 0 0 0 6px #292929, 0 18px 36px -16px #17171738, 0 4px 8px #17171714; }
+.showcase-device::before { content: ''; position: absolute; inset: 5px; border-radius: 56px; border: 1px solid #000; background: #111; pointer-events: none; }
+.showcase-device::after { content: ''; position: absolute; inset: 1px; border-radius: 60px; border: 1px solid #ffffff85; pointer-events: none; }
+.showcase-screen { position: relative; width: 390px; height: 844px; border-radius: 49px; overflow: hidden; isolation: isolate; background: #fcfcfc; box-shadow: 0 0 0 1px #050505; }
+.showcase-app { display: block; width: 390px; height: 844px; border: 0; background: #fcfcfc; }
+.dynamic-island { position: absolute; width: 104px; height: 28px; top: 10px; left: 50%; transform: translateX(-50%); border-radius: 22px; background: #070707; box-shadow: inset 0 0 0 1px #131313; pointer-events: none; }
+.island-camera { position: absolute; width: 10px; height: 10px; right: 10px; top: 9px; border-radius: 50%; background: radial-gradient(circle at 40% 35%,#263244 0%,#111a28 20%,#05070a 48%,#101114 68%,#020202 72%); box-shadow: 0 0 0 2px #0c0c0c; }
+.island-sensor { position: absolute; width: 34px; height: 4px; top: 12px; left: 22px; border-radius: 4px; background: #090909; }
+.device-button { position: absolute; width: 4px; border-radius: 2px; background: linear-gradient(90deg,#8b8983,#e5e2dc 50%,#96938d); box-shadow: inset 0 1px 1px #ffffffa0, 0 0 1px #666; }
+.device-action { left: -3px; top: 134px; height: 24px; }
+.device-volume-up { left: -3px; top: 183px; height: 53px; }
+.device-volume-down { left: -3px; top: 250px; height: 53px; }
+.device-power { right: -3px; top: 211px; height: 80px; }
+.device-antenna { position: absolute; height: 5px; width: 5px; background: #a4a29d; z-index: 1; }
+.antenna-top { top: 85px; right: 0; }
+.antenna-bottom { bottom: 85px; left: 0; }
+/* Presentation-only scrollbar treatment. The embedded app still scrolls normally. */
+html.showcase-embedded, .showcase-embedded body { scrollbar-width: none; }
+.showcase-embedded::-webkit-scrollbar, .showcase-embedded body::-webkit-scrollbar { display: none; }

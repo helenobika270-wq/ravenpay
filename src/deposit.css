@@ -1,0 +1,55 @@
+.deposit { cursor: pointer; }
+.deposit-card-pulse { position: absolute; top: 90px; bottom: 8px; left: 9px; right: 11px; border-radius: 20px; border: 1px solid #fb72fe; box-shadow: 0 0 22px #fb72fe60, inset 0 0 18px #fb72fe30; z-index: 5; pointer-events: none; }
+.deposit-modal-layer { position: fixed; inset: 0; z-index: 50; display: flex; align-items: flex-end; justify-content: center; }
+.deposit-backdrop { position: absolute; inset: 0; background: #17171766; backdrop-filter: blur(2px); }
+.deposit-sheet { position: relative; width: 100%; max-width: 430px; max-height: calc(100dvh - 24px); overflow-y: auto; overscroll-behavior: contain; background: #fcfcfc; border-radius: 28px 28px 0 0; padding: 0 24px max(24px, env(safe-area-inset-bottom)); box-shadow: 0 -8px 50px #00000012; }
+.sheet-drag-zone { height: 18px; touch-action: none; cursor: grab; margin-inline: -24px; }
+.sheet-drag-zone:active { cursor: grabbing; }
+.deposit-sheet { overflow-x: hidden; scrollbar-width: none; -ms-overflow-style: none; }
+.deposit-sheet::-webkit-scrollbar { display: none; width: 0; height: 0; }
+.deposit-sheet-toolbar { display: flex; align-items: center; justify-content: space-between; height: 32px; margin-bottom: 9px; }
+.demo-label { font-size: 9px; letter-spacing: 1.7px; color: #979799; font-weight: 500; }
+.sheet-close { border: 0; width: 32px; height: 32px; background: #f0f0f0; border-radius: 50%; display: grid; place-items: center; cursor: pointer; }
+.deposit-step { position: relative; }
+.deposit-step h2 { font-size: 25px; line-height: 32px; letter-spacing: -.8px; font-weight: 500; outline: none; }
+.sheet-subtitle { margin: 7px 0 22px; font-size: 12px; line-height: 18px; color: #979799; }
+.deposit-account-badge { display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border: 1px solid #ededed; border-radius: 20px; background: #f6f6f6; font-size: 12px; line-height: 18px; color: #525252; white-space: nowrap; }
+.amount-label { display: block; margin-top: 18px; color: #979799; font-size: 11px; text-align: center; }
+.amount-entry { display: flex; align-items: center; justify-content: center; margin: 7px 0 4px; min-height: 60px; font-size: clamp(30px, 10vw, 44px); font-weight: 700; line-height: 1.2; letter-spacing: -1.4px; font-variant-numeric: tabular-nums; }
+.amount-group { display: inline-flex; align-items: baseline; justify-content: center; max-width: 100%; }
+.amount-input-wrap { position: relative; display: inline-block; min-width: 1ch; }
+.amount-measure { display: block; visibility: hidden; white-space: pre; padding-right: 1px; }
+.amount-entry input { position: absolute; inset: 0; border: 0; outline: none; background: transparent; width: 100%; min-width: 0; font: inherit; letter-spacing: inherit; font-variant-numeric: inherit; color: inherit; padding: 0; caret-color: #d355d5; border-radius: 0; }
+.amount-entry input::placeholder { color: inherit; opacity: 1; }
+.amount-hint { margin: 0 0 22px; text-align: center; color: #979799; font-size: 11px; line-height: 16px; min-height: 16px; }
+.amount-error { color: #b63a69; }
+.amount-chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 22px; }
+.amount-chips button { min-height: 44px; border: 1px solid #eaeaea; border-radius: 12px; background: #f6f6f6; color: #525252; font-size: 12px; cursor: pointer; }
+.amount-chips button[aria-pressed=true] { border-color: #f3a3f4; background: #fce4fc; color: #8b388e; }
+.deposit-primary { display: flex; justify-content: center; align-items: center; gap: 10px; width: 100%; height: 48px; border: 0; border-radius: 24px; background: #fb72fe; color: #171717; font-size: 14px; font-weight: 500; cursor: pointer; }
+.deposit-primary:disabled { background: #ededed; color: #a2a2a2; cursor: default; }
+.deposit-primary span { font-size: 20px; line-height: 1; }
+.deposit-disclaimer { text-align: center; font-size: 10px; color: #979799; margin: 14px 0 0; line-height: 15px; }
+.review-hero { text-align: center; background: linear-gradient(145deg,#fff0ff,#f6f6f6); padding: 22px 8px; border-radius: 18px; margin: 6px 0 18px; }
+.review-hero > span { display: block; color: #979799; font-size: 9px; letter-spacing: 1.6px; margin-bottom: 7px; }
+.review-hero strong { font-size: clamp(26px,8vw,34px); font-weight: 500; letter-spacing: -.8px; font-variant-numeric: tabular-nums; }
+.deposit-review-details { margin-bottom: 24px; }
+.deposit-review-details > div { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 40px; font-size: 12px; }
+.deposit-review-details > div > span { color: #979799; }
+.deposit-review-details b { font-weight: 500; white-space: nowrap; }
+.deposit-review-details small { margin-left: 4px; border-radius: 6px; background: #fce4fc; color: #974a99; padding: 3px 5px; font-size: 9px; }
+.deposit-review-details .review-total { border-top: 1px solid #eaeaea; margin-top: 9px; padding-top: 9px; font-size: 14px; }
+.review-total > span { color: #171717 !important; }
+.edit-amount { display: block; margin: 8px auto 0; min-height: 34px; padding-inline: 15px; border: 0; background: none; font-size: 12px; color: #737373; cursor: pointer; }
+.deposit-result { text-align: center; padding-top: 10px; }
+.success-art { position: relative; width: 100px; height: 100px; margin: 13px auto 27px; display: grid; place-items: center; }
+.success-art.is-success { background: radial-gradient(ellipse, #fb72fe35, transparent 70%); }
+.success-medallion { position: relative; z-index: 1; width: 80px; height: 80px; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 8px 35px #fb72fe25; }
+.success-ring { position: absolute; inset: 10px; border: 1px solid #ef9cf1; border-radius: 50%; }
+.success-particle { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #ec9dee; }
+.success-amount { font-size: 34px; line-height: 42px; font-weight: 500; letter-spacing: -.8px; margin: 0 0 8px; font-variant-numeric: tabular-nums; }
+.deposit-result .sheet-subtitle { margin-bottom: 21px; }
+.deposit-result .deposit-primary { margin-top: 32px; }
+@media(min-width:600px) { .deposit-sheet { max-width: 390px; } }
+@media(max-width:359px) { .deposit-sheet { padding-inline: 18px; } .sheet-drag-zone { margin-inline: -18px; } .deposit-step h2 { font-size: 23px; } .deposit-account-badge { padding-inline: 8px; font-size: 11px; } }
+@media(prefers-reduced-motion:reduce) { .amount-chips button { transition: none; } }
