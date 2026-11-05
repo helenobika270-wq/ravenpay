@@ -26,7 +26,7 @@ export function Showcase() {
         <div className="device-antenna antenna-top" aria-hidden="true"/>
         <div className="device-antenna antenna-bottom" aria-hidden="true"/>
         <div className="showcase-screen">
-          <iframe title="Interactive Raven Finance prototype" src="/?showcase=embedded" className="showcase-app"/>
+          <iframe title="Interactive RavenPay prototype" src="/?showcase=embedded" className="showcase-app"/>
           <div className="dynamic-island" aria-hidden="true"><span className="island-sensor"/><span className="island-camera"/></div>
         </div>
       </div>

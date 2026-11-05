@@ -15,7 +15,7 @@ const banners = [
 export function PromoCarousel({ index, onChange }: { index: number; onChange: (index: number) => void }) {
   const reduced = useReducedMotion();
   const change = (next: number) => onChange(Math.max(0, Math.min(banners.length - 1, next)));
-  return <section className="promo-section" aria-label="Explore Raven Finance" aria-roledescription="carousel">
+  return <section className="promo-section" aria-label="Explore RavenPay" aria-roledescription="carousel">
     <div className="carousel-window" tabIndex={0} aria-label="Promotional banners. Use left and right arrow keys to browse." onKeyDown={event => {
       if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') { event.preventDefault(); change(index + (event.key === 'ArrowRight' ? 1 : -1)); }
     }}>
@@ -25,7 +25,7 @@ export function PromoCarousel({ index, onChange }: { index: number; onChange: (i
             onDragEnd={(_, info) => { if (Math.abs(info.offset.x) > 35 || (Math.abs(info.offset.x) > 8 && Math.abs(info.velocity.x) > 350)) change(index + (info.offset.x < 0 ? 1 : -1)); }}>
             <div className="promo-copy"><p>{banner.category}</p><h1>{banner.title}</h1><p>{banner.description}</p></div>
             {slide === 0 ? <div className="promo-art"><img draggable={false} src="/assets/banner.png" alt="Pink multi-currency wallet illustration"/></div> : <div className={`banner-graphic graphic-${banner.art}`} aria-hidden="true">
-              {slide === 1 ? <><div className="mini-card back-card"/><div className="mini-card front-card"><Lucide name="credit-card"/><span>••••  2048</span><b>Raven Finance</b></div></> : slide === 2 ? <><div className="goal-orbit"/><div className="graphic-tile"><Lucide name="piggy-bank"/></div><div className="tiny-spark"><Lucide name="sparkles"/></div></> : <><div className="graphic-tile globe-tile"><Lucide name="globe"/></div><span className="transfer-arrow"><Lucide name="arrow-up-right"/></span></>}
+              {slide === 1 ? <><div className="mini-card back-card"/><div className="mini-card front-card"><Lucide name="credit-card"/><span>••••  2048</span><b>RavenPay</b></div></> : slide === 2 ? <><div className="goal-orbit"/><div className="graphic-tile"><Lucide name="piggy-bank"/></div><div className="tiny-spark"><Lucide name="sparkles"/></div></> : <><div className="graphic-tile globe-tile"><Lucide name="globe"/></div><span className="transfer-arrow"><Lucide name="arrow-up-right"/></span></>}
             </div>}
           </motion.div>
         </div>)}
@@ -42,7 +42,7 @@ const moneyOptions: MenuItem[] = [
   { icon: 'piggy-bank', label: 'Savings', detail: 'Make room for your next goal' },
 ];
 const supportOptions: MenuItem[] = [
-  { icon: 'settings', label: 'Settings', detail: 'Make Raven Finance feel like you' },
+  { icon: 'settings', label: 'Settings', detail: 'Make RavenPay feel like you' },
   { icon: 'circle-help', label: 'Help & Support', detail: 'A little help, whenever you need it' },
 ];
 const profileOptions: MenuItem[] = [
@@ -68,10 +68,10 @@ export function DetailScreen({ page, onBack }: { page: 'more' | 'profile'; onBac
     <header className="detail-header"><button className="back-button" onClick={onBack} aria-label="Back to Home"><Lucide name="arrow-left"/></button><h1 ref={heading} tabIndex={-1}>{page === 'more' ? 'More' : 'Profile'}</h1><span className="header-spacer"/></header>
     <main className="detail-main">
       {page === 'more' ? <><div className="page-intro"><p>Make more of your money.</p><span>Everything you need, in one place.</span></div><MenuSection title="Your money" items={moneyOptions}/><MenuSection title="Here for you" items={supportOptions} delay={.06}/></> : <>
-        <div className="profile-card"><div className="profile-avatar-ring"><img src="/assets/avatar.png" alt="Raven"/></div><h2>Raven</h2><p>raven@example.com</p><span className="profile-tag">Your Raven Finance account</span></div>
+        <div className="profile-card"><div className="profile-avatar-ring"><img src="/assets/avatar.png" alt="Raven"/></div><h2>Raven</h2><p>raven@example.com</p><span className="profile-tag">Your RavenPay account</span></div>
         <MenuSection title="Your account" items={profileOptions}/><MenuSection title="Need a hand?" items={[supportOptions[1]]} delay={.06}/>
       </>}
-      <p className="detail-footer">A little more freedom. Raven Finance.</p>
+      <p className="detail-footer">A little more freedom. RavenPay.</p>
     </main>
   </>;
 }

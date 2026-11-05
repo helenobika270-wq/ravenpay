@@ -1,4 +1,4 @@
-# Raven Finance prototype
+# RavenPay prototype
 
 For screen recording, open `/showcase` on the local Vite server. The titanium phone frame embeds the same running app at 390 × 844, scales uniformly to fit the browser, and keeps all interactions inside the screen. The original `/` view is unchanged.
 
